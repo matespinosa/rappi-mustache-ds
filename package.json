@@ -14,6 +14,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@google/design.md": "^0.3.0",
     "@rappi-ds/icons": "0.2.0",
     "@rappi-ds/react": "0.2.0",
     "@rappi-ds/tokens": "0.2.0",
@@ -29,6 +30,8 @@
     "vite": "^7.2.4"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
