@@ -1,0 +1,2358 @@
+{
+  "ThemeProvider": [
+    {
+      "name": "theme",
+      "type": "ThemeName",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Pagination": [
+    {
+      "name": "page",
+      "type": "number",
+      "required": true,
+      "description": "Current page, 1-indexed.",
+      "defaultValue": ""
+    },
+    {
+      "name": "totalPages",
+      "type": "number",
+      "required": true,
+      "description": "Total number of pages.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onPageChange",
+      "type": "(page: number) => void",
+      "required": false,
+      "description": "Called when the user selects a new page.",
+      "defaultValue": ""
+    }
+  ],
+  "Button": [
+    {
+      "name": "appearance",
+      "type": "ButtonAppearance",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "size",
+      "type": "ButtonSize",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "loading",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "startIcon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Icono renderizado a la izquierda del label. Mutuamente excluyente con endIcon.",
+      "defaultValue": ""
+    },
+    {
+      "name": "endIcon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Icono renderizado a la derecha del label. Mutuamente excluyente con startIcon.",
+      "defaultValue": ""
+    }
+  ],
+  "IconButton": [
+    {
+      "name": "appearance",
+      "type": "ButtonAppearance",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "size",
+      "type": "ButtonSize",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "loading",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "icon",
+      "type": "ReactElement",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "aria-label",
+      "type": "string",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "BadgeNumber": [
+    {
+      "name": "appearance",
+      "type": "BadgeNumberAppearance",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "size",
+      "type": "BadgeNumberSize",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "value",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "showValue",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "BadgeLive": [
+    {
+      "name": "status",
+      "type": "BadgeLiveStatus",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "animated",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Accordion": [
+    {
+      "name": "title",
+      "type": "ReactNode",
+      "required": true,
+      "description": "Label shown in the header trigger.",
+      "defaultValue": ""
+    },
+    {
+      "name": "subtitle",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Optional supporting text below the title.",
+      "defaultValue": ""
+    },
+    {
+      "name": "icon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Optional icon anchored to the left of the header.",
+      "defaultValue": ""
+    },
+    {
+      "name": "slotRight",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Optional content placed between the text group and the chevron. If the slot contains interactive elements, call `event.stopPropagation()` on their handlers to prevent toggling the accordion.",
+      "defaultValue": ""
+    },
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Panel body — revealed when the accordion is open.",
+      "defaultValue": ""
+    },
+    {
+      "name": "defaultOpen",
+      "type": "boolean",
+      "required": false,
+      "description": "Uncontrolled: initial open state. Default `false`.",
+      "defaultValue": "false"
+    },
+    {
+      "name": "open",
+      "type": "boolean",
+      "required": false,
+      "description": "Controlled: open state. Pair with `onOpenChange`.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onOpenChange",
+      "type": "(open: boolean) => void",
+      "required": false,
+      "description": "Called when the accordion opens or closes.",
+      "defaultValue": ""
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Uploader": [
+    {
+      "name": "size",
+      "type": "UploaderSize",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "state",
+      "type": "UploaderState",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "fileName",
+      "type": "string",
+      "required": false,
+      "description": "Filename shown in loading/uploaded titles (e.g. \"IMG345444\")",
+      "defaultValue": ""
+    },
+    {
+      "name": "fileInfo",
+      "type": "string",
+      "required": false,
+      "description": "File type + size shown in subtitle (e.g. \"JPG 5 MB\")",
+      "defaultValue": ""
+    },
+    {
+      "name": "progress",
+      "type": "number",
+      "required": false,
+      "description": "Upload progress 0–100, drives the lg loading bar",
+      "defaultValue": ""
+    },
+    {
+      "name": "thumbnail",
+      "type": "string",
+      "required": false,
+      "description": "Image src shown in the lg uploaded thumbnail",
+      "defaultValue": ""
+    },
+    {
+      "name": "icon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Custom left icon. Defaults to ImageIcon.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onSelect",
+      "type": "() => void",
+      "required": false,
+      "description": "Called when the select/retry button or sm trailing icon is clicked",
+      "defaultValue": ""
+    },
+    {
+      "name": "errorMessage",
+      "type": "string",
+      "required": false,
+      "description": "Error reason shown as subtitle in error state, e.g. \"Supera los 5 MB\"",
+      "defaultValue": ""
+    },
+    {
+      "name": "uploadTitle",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "uploadSubtitle",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "dropTitle",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "selectLabel",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "reSelectLabel",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Tooltip": [
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": true,
+      "description": "Main text or content of the tooltip.",
+      "defaultValue": ""
+    },
+    {
+      "name": "icon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Optional decorative element in the left slot (constrained to 40×40px). Typically an icon, illustration, or avatar image.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onClose",
+      "type": "() => void",
+      "required": false,
+      "description": "Shows a close (×) button on the right and calls this handler when clicked. When omitted, no close button is rendered.",
+      "defaultValue": ""
+    },
+    {
+      "name": "arrowPosition",
+      "type": "TooltipArrowPosition",
+      "required": false,
+      "description": "Position of the directional arrow caret on the bubble. When omitted, no arrow is rendered.",
+      "defaultValue": ""
+    }
+  ],
+  "Snackbar": [
+    {
+      "name": "message",
+      "type": "ReactNode",
+      "required": true,
+      "description": "Notification text content.",
+      "defaultValue": ""
+    },
+    {
+      "name": "icon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Decorative icon rendered on the left. Shown when neither `avatar` nor `loading` is active.",
+      "defaultValue": ""
+    },
+    {
+      "name": "avatar",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Avatar element rendered on the left (40×40px, rounded-xl). Takes precedence over `icon`. Typically an `<img>`.",
+      "defaultValue": ""
+    },
+    {
+      "name": "loading",
+      "type": "boolean",
+      "required": false,
+      "description": "Replaces the left slot with an animated spinner. Takes precedence over `icon` and `avatar`.",
+      "defaultValue": ""
+    },
+    {
+      "name": "actionLabel",
+      "type": "string",
+      "required": false,
+      "description": "Label for the right-hand text action button (brand accent color). Takes precedence over `onNavigate` and `onClose`.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onAction",
+      "type": "() => void",
+      "required": false,
+      "description": "Called when the action text button is clicked.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onNavigate",
+      "type": "() => void",
+      "required": false,
+      "description": "Shows a chevron-right icon-button on the right. Takes precedence over `onClose`.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onClose",
+      "type": "() => void",
+      "required": false,
+      "description": "Shows a close (×) icon-button on the right. Shown when neither `actionLabel` nor `onNavigate` is provided.",
+      "defaultValue": ""
+    }
+  ],
+  "Search": [
+    {
+      "name": "size",
+      "type": "SearchSize",
+      "required": false,
+      "description": "Visual size. Default `lg`.",
+      "defaultValue": "lg"
+    },
+    {
+      "name": "showBackButton",
+      "type": "boolean",
+      "required": false,
+      "description": "Replaces the search icon with a back-arrow pill (e.g. for nested screens).",
+      "defaultValue": ""
+    },
+    {
+      "name": "onBack",
+      "type": "() => void",
+      "required": false,
+      "description": "Called when the back-button pill is clicked.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onClear",
+      "type": "() => void",
+      "required": false,
+      "description": "Called when the clear button is clicked or Escape is pressed while the input has a value. In controlled mode the consumer must reset `value`.",
+      "defaultValue": ""
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "required": false,
+      "description": "Placeholder text shown when the input is empty. Default `\"Buscar\"`.",
+      "defaultValue": "Buscar"
+    },
+    {
+      "name": "containerClassName",
+      "type": "string",
+      "required": false,
+      "description": "Extra className applied to the outer wrapper div.",
+      "defaultValue": ""
+    }
+  ],
+  "Tag": [
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "intent",
+      "type": "TagIntent",
+      "required": false,
+      "description": "Semantic intent that drives the color palette. Default: `'standard'`.",
+      "defaultValue": "standard"
+    },
+    {
+      "name": "variant",
+      "type": "TagVariant",
+      "required": false,
+      "description": "Visual treatment applied on top of the intent palette. Default: `'pastel'`.",
+      "defaultValue": "pastel"
+    },
+    {
+      "name": "size",
+      "type": "TagSize",
+      "required": false,
+      "description": "Height variant: `'sm'` = 16 px, `'md'` = 24 px. Default: `'md'`.",
+      "defaultValue": "md"
+    },
+    {
+      "name": "startIcon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Element rendered to the left of the label (icon, emoji, …).",
+      "defaultValue": ""
+    },
+    {
+      "name": "endIcon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Element rendered to the right of the label (icon, dismiss affordance, …).",
+      "defaultValue": ""
+    }
+  ],
+  "Checkbox": [
+    {
+      "name": "indeterminate",
+      "type": "boolean",
+      "required": false,
+      "description": "Renders the mixed-selection state. Sets the DOM .indeterminate property and adds the data-indeterminate attribute for CSS targeting.",
+      "defaultValue": ""
+    }
+  ],
+  "Chip": [
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "size",
+      "type": "ChipSize",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "variant",
+      "type": "ChipVariant",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "selected",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "startIcon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "endIcon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "badge",
+      "type": "number | string",
+      "required": false,
+      "description": "Renders a BadgeNumber at the trailing edge. Pass a count or short string.",
+      "defaultValue": ""
+    },
+    {
+      "name": "shadow",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Radio": [],
+  "RadioGroup": [
+    {
+      "name": "name",
+      "type": "string",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "legend",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "visuallyHiddenLegend",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Pin": [
+    {
+      "name": "label",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "length",
+      "type": "PinLength",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "value",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "defaultValue",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onValueChange",
+      "type": "(value: string) => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onComplete",
+      "type": "(value: string) => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "error",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "containerClassName",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "visuallyHiddenLabel",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "PinSkeleton": [
+    {
+      "name": "length",
+      "type": "PinLength",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Toggle": [
+    {
+      "name": "checked",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the toggle is in the on (checked) state.",
+      "defaultValue": ""
+    },
+    {
+      "name": "size",
+      "type": "ToggleSize",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Select": [
+    {
+      "name": "options",
+      "type": "SelectOption[]",
+      "required": false,
+      "description": "Options displayed in the dropdown.",
+      "defaultValue": ""
+    },
+    {
+      "name": "value",
+      "type": "string",
+      "required": false,
+      "description": "Controlled selected value.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onChange",
+      "type": "(value: string) => void",
+      "required": false,
+      "description": "Called with the new value when the user selects an option.",
+      "defaultValue": ""
+    },
+    {
+      "name": "label",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Visible label rendered above the trigger.",
+      "defaultValue": ""
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "required": false,
+      "description": "Placeholder shown when no value is selected.",
+      "defaultValue": ""
+    },
+    {
+      "name": "size",
+      "type": "SelectSize",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "readOnly",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "invalid",
+      "type": "boolean",
+      "required": false,
+      "description": "Marks the field as invalid and applies the error border.",
+      "defaultValue": ""
+    },
+    {
+      "name": "skeleton",
+      "type": "boolean",
+      "required": false,
+      "description": "Renders the skeleton loading state. Overrides all other states.",
+      "defaultValue": ""
+    },
+    {
+      "name": "helperText",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Helper text rendered below the trigger.",
+      "defaultValue": ""
+    },
+    {
+      "name": "error",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Error message rendered below the trigger and activates `invalid`.",
+      "defaultValue": ""
+    },
+    {
+      "name": "id",
+      "type": "string",
+      "required": false,
+      "description": "Forwarded to the trigger `<button>` as `id`.",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "aria-label",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "aria-describedby",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "selectionIndicator",
+      "type": "SelectSelectionIndicator",
+      "required": false,
+      "description": "Renders a selection indicator in each option row: - `'check'`: checkmark on the **right** of the selected option only. - `'radio'`: radio circle on the **left** of every option, filled for the selected one. - `'checkbox'`: checkbox on the **left** of every option, checked for the selected one.",
+      "defaultValue": ""
+    }
+  ],
+  "SelectSkeleton": [
+    {
+      "name": "size",
+      "type": "SelectSize",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "showLabel",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "TextFieldPhone": [
+    {
+      "name": "label",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "countries",
+      "type": "readonly TextFieldPhoneCountry[]",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "countryCode",
+      "type": "string",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onCountryChange",
+      "type": "(country: TextFieldPhoneCountry, event: ChangeEvent<HTMLSelectElement>) => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "countrySelectLabel",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "countrySelectName",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "value",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "defaultValue",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "helperText",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "error",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "clearable",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onClear",
+      "type": "() => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "containerClassName",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "visuallyHiddenLabel",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "TextFieldPhoneSkeleton": [
+    {
+      "name": "showLabel",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "showHelperText",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "TextField": [
+    {
+      "name": "label",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "fieldSize",
+      "type": "TextFieldSize",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "helperText",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "error",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "startAdornment",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "endAdornment",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "containerClassName",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "visuallyHiddenLabel",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "TextFieldSkeleton": [
+    {
+      "name": "size",
+      "type": "TextFieldSize",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "showLabel",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "showHelperText",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "TextArea": [
+    {
+      "name": "label",
+      "type": "ReactNode",
+      "required": true,
+      "description": "Visible label rendered above the control.",
+      "defaultValue": ""
+    },
+    {
+      "name": "helperText",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Helper text rendered below the control in neutral state.",
+      "defaultValue": ""
+    },
+    {
+      "name": "error",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Error message. When provided activates the invalid visual state.",
+      "defaultValue": ""
+    },
+    {
+      "name": "visuallyHiddenLabel",
+      "type": "boolean",
+      "required": false,
+      "description": "Hides the label visually while keeping it accessible.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onClear",
+      "type": "() => void",
+      "required": false,
+      "description": "When provided a clear button (×) is shown while the field has a value and is not disabled or readOnly. Caller is responsible for clearing the value in this handler.",
+      "defaultValue": ""
+    },
+    {
+      "name": "containerClassName",
+      "type": "string",
+      "required": false,
+      "description": "Extra class applied to the outer wrapper div.",
+      "defaultValue": ""
+    }
+  ],
+  "TextAreaSkeleton": [
+    {
+      "name": "showLabel",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "showHelperText",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Breadcrumb": [
+    {
+      "name": "items",
+      "type": "BreadcrumbItem[]",
+      "required": true,
+      "description": "Ordered list of steps. The **last item** is always the current page: rendered non-interactively with `aria-current=\"page\"`. All previous items are rendered as links or buttons.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onBack",
+      "type": "() => void",
+      "required": false,
+      "description": "Handler for the back (‹) button shown when there are ≥ 2 items. When omitted, falls back to the `onClick` of the second-to-last item.",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Tabs": [
+    {
+      "name": "value",
+      "type": "string",
+      "required": true,
+      "description": "Currently active tab value.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onChange",
+      "type": "(value: string) => void",
+      "required": true,
+      "description": "Called when the user selects a different tab.",
+      "defaultValue": ""
+    },
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "TabList": [
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "aria-label",
+      "type": "string",
+      "required": false,
+      "description": "Accessible label for the tab list when there is no visible heading nearby.",
+      "defaultValue": ""
+    },
+    {
+      "name": "aria-labelledby",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Tab": [
+    {
+      "name": "value",
+      "type": "string",
+      "required": true,
+      "description": "Unique identifier matching a `<TabPanel value>`.",
+      "defaultValue": ""
+    },
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "startIcon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Icon rendered to the left of the label.",
+      "defaultValue": ""
+    },
+    {
+      "name": "endIcon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Icon rendered to the right of the label.",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "TabPanel": [
+    {
+      "name": "value",
+      "type": "string",
+      "required": true,
+      "description": "Must match the `value` of its corresponding `<Tab>`.",
+      "defaultValue": ""
+    },
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Notification": [
+    {
+      "name": "intent",
+      "type": "NotificationIntent",
+      "required": false,
+      "description": "Semantic intent — drives background color, text color and default icon.",
+      "defaultValue": ""
+    },
+    {
+      "name": "variant",
+      "type": "NotificationVariant",
+      "required": false,
+      "description": "Visual weight: - `'solid'` — vibrant/dark background, white text (default for success/warning/error/info/ai) - `'pastel'` — light tinted background, colored text The `'default'` intent ignores this prop and always renders a neutral surface.",
+      "defaultValue": ""
+    },
+    {
+      "name": "size",
+      "type": "NotificationSize",
+      "required": false,
+      "description": "`'lg'` (default) — full-width inline banner. `'sm'` — compact toast style.",
+      "defaultValue": ""
+    },
+    {
+      "name": "message",
+      "type": "ReactNode",
+      "required": true,
+      "description": "Main notification text.",
+      "defaultValue": ""
+    },
+    {
+      "name": "icon",
+      "type": "ReactNode | null",
+      "required": false,
+      "description": "Overrides the default intent icon. Pass `null` to hide the icon entirely. Ignored when `image` is provided.",
+      "defaultValue": ""
+    },
+    {
+      "name": "image",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Image or avatar rendered in the icon slot (e.g. brand logo, user photo). Takes priority over `icon`.",
+      "defaultValue": ""
+    },
+    {
+      "name": "action",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Inline action label shown at the trailing end of the notification (e.g. \"Deshacer\").",
+      "defaultValue": ""
+    },
+    {
+      "name": "onAction",
+      "type": "() => void",
+      "required": false,
+      "description": "Called when the user clicks the inline action.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onClose",
+      "type": "() => void",
+      "required": false,
+      "description": "When provided a dismiss (×) button is rendered.",
+      "defaultValue": ""
+    },
+    {
+      "name": "closeLabel",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": "Cerrar"
+    },
+    {
+      "name": "role",
+      "type": "'alert' | 'status' | 'none'",
+      "required": false,
+      "description": "ARIA live region role. Defaults to `'alert'` for `error` intent and `'status'` for all others. Pass `'none'` to opt out of the live region.",
+      "defaultValue": "alert"
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "SegmentedControl": [
+    {
+      "name": "value",
+      "type": "string",
+      "required": true,
+      "description": "Controlled selected value.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onChange",
+      "type": "(value: string) => void",
+      "required": true,
+      "description": "Called when a new option is selected.",
+      "defaultValue": ""
+    },
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "aria-label",
+      "type": "string",
+      "required": true,
+      "description": "Accessible label for the control group (required for screen readers).",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "SegmentedOption": [
+    {
+      "name": "value",
+      "type": "string",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "startIcon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Icon rendered before the label text.",
+      "defaultValue": ""
+    },
+    {
+      "name": "endIcon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Icon rendered after the label text.",
+      "defaultValue": ""
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Calendar": [
+    {
+      "name": "variant",
+      "type": "CalendarVariant",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "value",
+      "type": "Date | null",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "defaultValue",
+      "type": "Date | null",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onChange",
+      "type": "(date: Date | null) => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "rangeValue",
+      "type": "CalendarRange",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "defaultRangeValue",
+      "type": "CalendarRange",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onRangeChange",
+      "type": "(range: CalendarRange) => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "defaultMonth",
+      "type": "Date",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "minDate",
+      "type": "Date",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "maxDate",
+      "type": "Date",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onConfirm",
+      "type": "(date: Date | null) => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onApply",
+      "type": "(range: CalendarRange) => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onCancel",
+      "type": "() => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "confirmLabel",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "applyLabel",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "cancelLabel",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Card": [
+    {
+      "name": "elevation",
+      "type": "CardElevation",
+      "required": false,
+      "description": "Controls the drop-shadow level. - flat: no shadow, border only (default) - raised: subtle shadow — cards on a surface (0 5px 10px …0.04) - floating: stronger shadow — cards that hover above content (0 6px 14px …0.08)",
+      "defaultValue": ""
+    }
+  ],
+  "CardAction": [
+    {
+      "name": "title",
+      "type": "ReactNode",
+      "required": true,
+      "description": "Main text label.",
+      "defaultValue": ""
+    },
+    {
+      "name": "description",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Secondary text shown below the title. Hidden when `showDescription` is false.",
+      "defaultValue": ""
+    },
+    {
+      "name": "showDescription",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": "true"
+    },
+    {
+      "name": "selected",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether this card is in the selected state. Selected → dark border (`--border-strong`).",
+      "defaultValue": "false"
+    },
+    {
+      "name": "leftSlot",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Slot rendered on the left of the text content. Pass design-system primitives (`Checkbox`, `Radio`, icons…) as **decorative** mirrors of state — the card handles the click, not the slot control. Pass `null` to render nothing.",
+      "defaultValue": ""
+    },
+    {
+      "name": "rightSlot",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Slot rendered on the right of the card. Pass `null` to render nothing.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onClick",
+      "type": "() => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "ComboBox": [
+    {
+      "name": "options",
+      "type": "ComboBoxOption[]",
+      "required": false,
+      "description": "All available options. Filtered internally by `inputValue` when uncontrolled.",
+      "defaultValue": ""
+    },
+    {
+      "name": "value",
+      "type": "string[]",
+      "required": false,
+      "description": "Currently selected values (multi-select). An empty array means \"nothing selected\".",
+      "defaultValue": ""
+    },
+    {
+      "name": "onChange",
+      "type": "(values: string[]) => void",
+      "required": false,
+      "description": "Called whenever the selection changes.",
+      "defaultValue": ""
+    },
+    {
+      "name": "inputValue",
+      "type": "string",
+      "required": false,
+      "description": "Controlled search text. When provided, filtering is delegated to the consumer (useful for async / server-side search). When omitted, ComboBox filters internally.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onInputChange",
+      "type": "(value: string) => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "label",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "helperText",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "error",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "invalid",
+      "type": "boolean",
+      "required": false,
+      "description": "Marks the field as visually invalid (red border). Overridden when `error` is set.",
+      "defaultValue": ""
+    },
+    {
+      "name": "leftIcon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Icon rendered on the left of the input field (24×24).",
+      "defaultValue": ""
+    },
+    {
+      "name": "size",
+      "type": "ComboBoxSize",
+      "required": false,
+      "description": "`'lg'` — desktop, 56 px height, 16 px font (body-lg). `'sm'` — mobile, 44 px height, 14 px font (body-md).",
+      "defaultValue": ""
+    },
+    {
+      "name": "required",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "clearable",
+      "type": "boolean",
+      "required": false,
+      "description": "Show a clear (×) button when the input has text.",
+      "defaultValue": "true"
+    },
+    {
+      "name": "onClear",
+      "type": "() => void",
+      "required": false,
+      "description": "Called when the user clicks the clear button.",
+      "defaultValue": ""
+    },
+    {
+      "name": "skeleton",
+      "type": "boolean",
+      "required": false,
+      "description": "Renders the skeleton loading state — overrides all other states.",
+      "defaultValue": ""
+    },
+    {
+      "name": "id",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "aria-label",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "ComboBoxSkeleton": [
+    {
+      "name": "size",
+      "type": "ComboBoxSize",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "showLabel",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "showHelper",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Dialog": [
+    {
+      "name": "open",
+      "type": "boolean",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onClose",
+      "type": "() => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "showFooter",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "primaryLabel",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "secondaryLabel",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onPrimary",
+      "type": "() => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onSecondary",
+      "type": "() => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "elevation",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "BottomSheet": [
+    {
+      "name": "open",
+      "type": "boolean",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "size",
+      "type": "BottomSheetSize",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "grabber",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "showFooter",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onClose",
+      "type": "() => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "primaryLabel",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "secondaryLabel",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onPrimary",
+      "type": "() => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onSecondary",
+      "type": "() => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "Drawer": [
+    {
+      "name": "open",
+      "type": "boolean",
+      "required": true,
+      "description": "Controls whether the modal drawer is visible.",
+      "defaultValue": ""
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true,
+      "description": "Accessible title displayed in the fixed header.",
+      "defaultValue": ""
+    },
+    {
+      "name": "children",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Scrollable drawer content.",
+      "defaultValue": ""
+    },
+    {
+      "name": "size",
+      "type": "DrawerSize",
+      "required": false,
+      "description": "Figma width variant: 380px, 480px, or 640px.",
+      "defaultValue": ""
+    },
+    {
+      "name": "onClose",
+      "type": "() => void",
+      "required": false,
+      "description": "Called by the close button, Escape key, or scrim click.",
+      "defaultValue": ""
+    },
+    {
+      "name": "closeLabel",
+      "type": "string",
+      "required": false,
+      "description": "Accessible label for the icon-only close action.",
+      "defaultValue": ""
+    },
+    {
+      "name": "showFooter",
+      "type": "boolean",
+      "required": false,
+      "description": "Shows the docked action region from the Figma component.",
+      "defaultValue": ""
+    },
+    {
+      "name": "showSecondaryAction",
+      "type": "boolean",
+      "required": false,
+      "description": "Shows the supporting action before the primary action.",
+      "defaultValue": ""
+    },
+    {
+      "name": "primaryLabel",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "secondaryLabel",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onPrimary",
+      "type": "() => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onSecondary",
+      "type": "() => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "closeOnScrimClick",
+      "type": "boolean",
+      "required": false,
+      "description": "Allows consumers to keep the drawer open when the scrim is clicked.",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "EmptyState": [
+    {
+      "name": "title",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Main heading text.",
+      "defaultValue": "Algo ocurrió"
+    },
+    {
+      "name": "description",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Supporting description below the title.",
+      "defaultValue": "Se produjo un error, vuelve a intentarlo."
+    },
+    {
+      "name": "size",
+      "type": "EmptyStateSize",
+      "required": false,
+      "description": "`'md'` — compact (48 px icon, body-lg title, caption description). `'lg'` — full-page (144 px icon, h2 title, body description). Text renders ABOVE the icon.",
+      "defaultValue": "md"
+    },
+    {
+      "name": "skeleton",
+      "type": "boolean",
+      "required": false,
+      "description": "Renders skeleton loading placeholders instead of real content.",
+      "defaultValue": "false"
+    },
+    {
+      "name": "icon",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Icon rendered inside the circle illustration. Defaults to `<Unplug />` (disconnect icon). Pass `null` to render no icon.",
+      "defaultValue": "<Unplug />"
+    },
+    {
+      "name": "showAction",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to show the action button.",
+      "defaultValue": "true"
+    },
+    {
+      "name": "action",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Custom action element. When omitted a secondary \"Reintentar\" button is rendered.",
+      "defaultValue": ""
+    },
+    {
+      "name": "actionLabel",
+      "type": "string",
+      "required": false,
+      "description": "Label for the default action button. Only used when `action` is not provided.",
+      "defaultValue": "Reintentar"
+    },
+    {
+      "name": "onAction",
+      "type": "() => void",
+      "required": false,
+      "description": "Click handler for the default action button.",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "CardTable": [
+    {
+      "name": "selectionControl",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Dedicated leading region for row selection.",
+      "defaultValue": ""
+    },
+    {
+      "name": "title",
+      "type": "ReactNode",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "titleAdornment",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "meta",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "status",
+      "type": "ReactNode",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "fields",
+      "type": "readonly CardTableField[]",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "actions",
+      "type": "readonly ReactNode[]",
+      "required": false,
+      "description": "Explicit controls only. At most two actions are rendered.",
+      "defaultValue": ""
+    },
+    {
+      "name": "layout",
+      "type": "CardTableLayout",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "density",
+      "type": "CardTableDensity",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ],
+  "TableCell": [
+    {
+      "name": "leading",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Optional element rendered before the text block.",
+      "defaultValue": ""
+    },
+    {
+      "name": "title",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Optional emphasized line above the main content.",
+      "defaultValue": ""
+    },
+    {
+      "name": "trailing",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Optional element rendered after the text block.",
+      "defaultValue": ""
+    },
+    {
+      "name": "align",
+      "type": "TableCellAlign",
+      "required": false,
+      "description": "Logical alignment that remains correct in RTL layouts.",
+      "defaultValue": ""
+    }
+  ],
+  "TableHeaderCell": [
+    {
+      "name": "leading",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Optional element rendered before the text block.",
+      "defaultValue": ""
+    },
+    {
+      "name": "title",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Optional emphasized line above the main content.",
+      "defaultValue": ""
+    },
+    {
+      "name": "trailing",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Optional element rendered after the text block.",
+      "defaultValue": ""
+    },
+    {
+      "name": "align",
+      "type": "TableCellAlign",
+      "required": false,
+      "description": "Logical alignment that remains correct in RTL layouts.",
+      "defaultValue": ""
+    }
+  ],
+  "DataTable": [
+    {
+      "name": "rows",
+      "type": "readonly T[]",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "columns",
+      "type": "readonly DataTableColumn<T>[]",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "getRowId",
+      "type": "(row: T) => string",
+      "required": true,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "getRowLabel",
+      "type": "(row: T, index: number) => string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "selectedRowIds",
+      "type": "readonly string[]",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "onSelectionChange",
+      "type": "(selectedRowIds: string[]) => void",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "isRowSelectable",
+      "type": "(row: T) => boolean",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "pagination",
+      "type": "DataTablePagination",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "state",
+      "type": "DataTableState",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "mobileLayout",
+      "type": "CardTableLayout",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "mobileDensity",
+      "type": "CardTableDensity",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "ariaLabel",
+      "type": "string",
+      "required": false,
+      "description": "Accessible name for the native table.",
+      "defaultValue": ""
+    },
+    {
+      "name": "caption",
+      "type": "ReactNode",
+      "required": false,
+      "description": "Optional visible or screen-reader caption for the native table.",
+      "defaultValue": ""
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "required": false,
+      "description": "",
+      "defaultValue": ""
+    }
+  ]
+}
