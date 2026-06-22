@@ -7,14 +7,13 @@ const INSTALL = 'pnpm add @rappi-ds/react @rappi-ds/tokens @rappi-ds/icons'
 
 const SETUP = `// main.tsx
 import '@rappi-ds/tokens/base.css'
-import '@rappi-ds/tokens/themes/food.css' // elige el tema de tu producto
 import '@rappi-ds/react/styles.css'
 
 import { ThemeProvider, Button } from '@rappi-ds/react'
 
 export function App() {
   return (
-    <ThemeProvider theme="food">
+    <ThemeProvider>
       <Button appearance="primary">Hola, Rappi</Button>
     </ThemeProvider>
   )
@@ -45,7 +44,7 @@ export function HomePage() {
           <span className="stat__label">temas de producto</span>
         </div>
         <div className="stat">
-          <span className="stat__num">v0.2.0</span>
+          <span className="stat__num">v0.3.0</span>
           <span className="stat__label">versión del paquete</span>
         </div>
       </div>

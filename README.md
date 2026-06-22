@@ -3,7 +3,7 @@
 Portal de documentación **interactiva** del design system de Rappi
 ([`@rappi-ds/react`](https://www.npmjs.com/package/@rappi-ds/react)). Cada
 componente tiene una página con ejemplos en vivo, su código y una tabla de props,
-y puedes previsualizar todo con cualquiera de los **17 temas de producto** desde el
+y puedes previsualizar todo con cualquiera de los **12 temas de producto** desde el
 selector de la barra superior.
 
 Construido **desde cero** con Vite + React 19 + TypeScript.
@@ -79,10 +79,10 @@ versión de `@rappi-ds/react`, vuelve a correr `pnpm generate:props`.
 ## Temas
 
 `main.tsx` importa `@rappi-ds/tokens/base.css` (define los tokens en `:root` y
-carga la tipografía PP Object Sans) y los 17 CSS de tema. El `ThemeProvider`
-del DS cambia el atributo `data-theme`, y el selector de la barra superior solo
-cambia esa prop — el portal entero (incluido su propio chrome) se re-tematiza
-porque sus estilos también usan las variables de `@rappi-ds/tokens`.
+carga la tipografía PP Object Sans), el tema base Merchants y los 11 CSS de tema. El `ThemeProvider`
+del DS cambia el atributo `data-theme`. El portal también sincroniza ese atributo
+en el documento para que los componentes montados mediante portales (Dialog,
+Drawer, BottomSheet, etc.) hereden el mismo tema y accent que el resto de la UI.
 
 ## Agregar un componente nuevo
 

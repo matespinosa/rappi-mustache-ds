@@ -21,7 +21,7 @@ export function Sidebar() {
   }, [query])
 
   return (
-    <nav className="sidebar" aria-label="Componentes">
+    <nav id="portal-sidebar" className="sidebar" aria-label="Componentes">
       <div className="sidebar__search">
         <Search
           size="sm"

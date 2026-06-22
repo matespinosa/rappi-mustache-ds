@@ -15,11 +15,11 @@ importers:
         specifier: 0.2.0
         version: 0.2.0(react@19.2.7)
       '@rappi-ds/react':
-        specifier: 0.2.0
-        version: 0.2.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        specifier: 0.3.0
+        version: 0.3.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@rappi-ds/tokens':
-        specifier: 0.2.0
-        version: 0.2.0
+        specifier: 0.2.1
+        version: 0.2.1
       react:
         specifier: ^19.2.0
         version: 19.2.7
@@ -312,14 +312,14 @@ packages:
     peerDependencies:
       react: '>=18'
 
-  '@rappi-ds/react@0.2.0':
-    resolution: {integrity: sha512-Z+jIRoO0IeUXNtLp+exFu4ti217K28COwguuydrtjy2O/7qovPnWFV+idK0xJzrwqycrUmIAovA2PKBwXEIAOA==}
+  '@rappi-ds/react@0.3.0':
+    resolution: {integrity: sha512-qmSJJ1shbRgF3bvhU7VvY2eUFvjwh3liaFFTxPZx31FF571lf8c7AGBLpft2KwNOUAh6PqFUXORAJGhQX9UkCw==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@rappi-ds/tokens@0.2.0':
-    resolution: {integrity: sha512-xFu21kCeqGXZkp72HUSralYG8LzdSO0HbWOBK/jgn5UkI0GokCY+3YaoAlbegPMM8n8BHYKlp8Jqyq6g/2ovww==}
+  '@rappi-ds/tokens@0.2.1':
+    resolution: {integrity: sha512-2SNQ2EpLsxkjtE5LJMhNXr7JiP3/HoxAk7GFAoe0G+NDzHNKDOAdiQU42vuEWkkLv7VVTO6vJhRg5GQzdHtdpA==}
 
   '@rolldown/pluginutils@1.0.0-rc.3':
     resolution: {integrity: sha512-eybk3TjzzzV97Dlj5c+XrBFW57eTNhzod66y9HrBlzJ6NsCrWCp/2kaPS3K9wJmurBC0Tdw4yPjXKZqlznim3Q==}
@@ -1213,15 +1213,15 @@ snapshots:
       lucide-react: 0.525.0(react@19.2.7)
       react: 19.2.7
 
-  '@rappi-ds/react@0.2.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@rappi-ds/react@0.3.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
       '@rappi-ds/icons': 0.2.0(react@19.2.7)
-      '@rappi-ds/tokens': 0.2.0
+      '@rappi-ds/tokens': 0.2.1
       clsx: 2.1.1
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
 
-  '@rappi-ds/tokens@0.2.0': {}
+  '@rappi-ds/tokens@0.2.1': {}
 
   '@rolldown/pluginutils@1.0.0-rc.3': {}
 

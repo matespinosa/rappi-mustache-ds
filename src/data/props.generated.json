@@ -2009,6 +2009,13 @@
       "defaultValue": ""
     },
     {
+      "name": "showPrimaryAction",
+      "type": "boolean",
+      "required": false,
+      "description": "Shows the primary action in the footer.",
+      "defaultValue": ""
+    },
+    {
       "name": "showSecondaryAction",
       "type": "boolean",
       "required": false,

@@ -16,8 +16,8 @@
   "dependencies": {
     "@google/design.md": "^0.3.0",
     "@rappi-ds/icons": "0.2.0",
-    "@rappi-ds/react": "0.2.0",
-    "@rappi-ds/tokens": "0.2.0",
+    "@rappi-ds/react": "0.3.0",
+    "@rappi-ds/tokens": "0.2.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.1.1"
